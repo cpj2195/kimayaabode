@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kimaya's Abode - Cozy Homestay Near Chandigarh</title>
+  <meta name="description" content="Kimaya's Abode - A cozy 2BHK homestay near Chandigarh with natural views, modern amenities, fully equipped kitchen, and prime location. Book on Airbnb, MakeMyTrip, or Booking.com.">
+  <meta name="keywords" content="homestay, Chandigarh, New Chandigarh, Mohali, 2BHK, vacation rental, Airbnb, Kimaya's Abode">
+  <meta property="og:title" content="Kimaya's Abode - Cozy Homestay Near Chandigarh">
+  <meta property="og:description" content="Cozy 2BHK homestay with natural views, modern amenities, and prime location near Chandigarh. Book your stay today.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kimayasabode.com">
+  <meta property="og:image" content="https://kimayasabode.com/images/entrance.jpeg">
+  <link rel="canonical" href="https://kimayasabode.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      color: #1f2937;
+      overflow-x: hidden;
+    }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+    /* Header */
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: rgba(10, 15, 30, 0.95);
+      backdrop-filter: blur(20px);
+      z-index: 1000;
+      padding: 15px 0;
+    }
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: white;
+      font-weight: 700;
+      font-size: 22px;
+    }
+    .logo-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #6366f1, #8b5cf6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+    }
+    .nav-menu {
+      display: flex;
+      list-style: none;
+      gap: 30px;
+      align-items: center;
+    }
+    .nav-link {
+      color: #cbd5e1;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 8px 16px;
+      border-radius: 25px;
+      transition: all 0.3s ease;
+    }
+    .nav-link:hover, .nav-link.active {
+      background: rgba(99, 102, 241, 0.2);
+      color: #6366f1;
+    }
+    .book-btn {
+      background: linear-gradient(135deg, #6366f1, #8b5cf6);
+      color: white !important;
+      padding: 12px 24px !important;
+      border-radius: 30px !important;
+      font-weight: 600 !important;
+    }
+
+    /* Hero */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="%23f1f5f9" opacity="0.3"/><circle cx="75" cy="75" r="0.8" fill="%23e2e8f0" opacity="0.4"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+      animation: float 20s ease-in-out infinite;
+    }
+    @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+    .hero-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+      z-index: 2;
+      position: relative;
+    }
+    .hero-text h1 {
+      font-size: clamp(2.8rem, 6vw, 4.5rem);
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 24px;
+      background: linear-gradient(135deg, #1e293b, #334155);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero-text p {
+      font-size: 1.3rem;
+      color: #64748b;
+      margin-bottom: 32px;
+      max-width: 500px;
+    }
+    .hero-cta {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .btn {
+      padding: 16px 32px;
+      border-radius: 50px;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, #6366f1, #8b5cf6);
+      color: white;
+      box-shadow: 0 10px 30px rgba(99, 102, 241, 0.4);
+    }
+    .btn-primary:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px rgba(99, 102, 241, 0.5);
+    }
+    .btn-secondary {
+      background: transparent;
+      color: #6366f1;
+      border: 2px solid #c7d2fe;
+    }
+    .hero-gallery {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto;
+      gap: 20px;
+    }
+    .hero-gallery img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 20px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+      transition: transform 0.4s ease;
+    }
+    .hero-gallery img:hover { transform: scale(1.05); }
+
+    /* Amenities */
+    .amenities {
+      padding: 120px 0;
+      background: #f8fafc;
+    }
+    .section-header {
+      text-align: center;
+      margin-bottom: 80px;
+    }
+    .section-title {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 800;
+      margin-bottom: 16px;
+    }
+    .section-subtitle {
+      font-size: 1.25rem;
+      color: #64748b;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .amenities-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+    .amenity-card {
+      background: white;
+      padding: 40px 30px;
+      border-radius: 24px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+      text-align: center;
+      transition: all 0.3s ease;
+      border: 1px solid #f1f5f9;
+    }
+    .amenity-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 30px 80px rgba(0,0,0,0.15);
+    }
+    .amenity-icon {
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(135deg, #10b981, #059669);
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px;
+      font-size: 28px;
+      color: white;
+    }
+    .amenity-card h3 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+    .amenity-price {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: #059669;
+      margin-bottom: 8px;
+    }
+
+    /* Why Choose */
+    .why-choose {
+      padding: 120px 0;
+      background: white;
+    }
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+    }
+    .why-card {
+      text-align: center;
+      padding: 40px 20px;
+    }
+    .why-number {
+      width: 70px;
+      height: 70px;
+      background: linear-gradient(135deg, #6366f1, #8b5cf6);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      font-weight: 700;
+      margin: 0 auto 24px;
+    }
+    .why-card h3 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+    .why-card p {
+      color: #6b7280;
+      font-size: 1.05rem;
+    }
+
+    /* CTA Section */
+    .cta-section {
+      padding: 120px 0;
+      background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+      color: white;
+      overflow: hidden;
+    }
+    .cta-content {
+      display: grid;
+      grid-template-columns: 1fr 400px;
+      gap: 80px;
+      align-items: center;
+    }
+    .cta-text h2 {
+      font-size: clamp(2.2rem, 5vw, 3.2rem);
+      margin-bottom: 24px;
+    }
+    .cta-text p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+      margin-bottom: 40px;
+      max-width: 500px;
+    }
+    .cta-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .contact-card {
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 20px;
+      padding: 32px;
+    }
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 16px;
+      border-radius: 16px;
+      background: rgba(255,255,255,0.05);
+      margin-bottom: 12px;
+      transition: background 0.3s;
+    }
+    .contact-item:hover { background: rgba(255,255,255,0.1); }
+    .contact-icon { 
+      width: 48px;
+      height: 48px;
+      background: linear-gradient(135deg, #6366f1, #8b5cf6);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+    }
+
+    /* Footer */
+    .footer {
+      background: #020617;
+      color: #94a3b8;
+      padding: 60px 0 30px;
+    }
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+    .footer h4 {
+      color: white;
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+    .social-links {
+      display: flex;
+      gap: 16px;
+      margin-top: 20px;
+    }
+    .social-link {
+      width: 48px;
+      height: 48px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      transition: all 0.3s;
+    }
+    .social-link:hover {
+      background: linear-gradient(135deg, #6366f1, #8b5cf6);
+      transform: translateY(-3px);
+    }
+
+    /* Photo Gallery */
+    .gallery {
+      padding: 120px 0;
+      background: #f8fafc;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .gallery-grid img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+    .gallery-grid img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+    }
+
+    @media (max-width: 768px) {
+      .header-content { padding: 0 16px; }
+      .hero-content { grid-template-columns: 1fr; gap: 40px; text-align: center; }
+      .cta-content { grid-template-columns: 1fr; gap: 40px; }
+      .nav-menu { gap: 20px; }
+      .hero-gallery { grid-template-columns: 1fr; }
+      .gallery-grid { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <div class="logo-icon">🏠</div>
+          Kimaya's Abode
+        </div>
+        <ul class="nav-menu">
+          <li><a href="#hero" class="nav-link">Home</a></li>
+          <li><a href="#amenities" class="nav-link">Amenities</a></li>
+          <li><a href="#why" class="nav-link">Why Us</a></li>
+          <li><a href="#gallery" class="nav-link">Gallery</a></li>
+          <li><a href="#book" class="nav-link book-btn">Book Now</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1>Experience Comfort Living</h1>
+          <p>Cozy two bedroom flat near Chandigarh with natural views, modern amenities, and convenient location near major landmarks</p>
+          <div class="hero-cta">
+            <a href="YOUR_AIRBNB_LINK" class="btn btn-primary" target="_blank">
+              <i class="fab fa-airbnb"></i> Book on Airbnb
+            </a>
+            <a href="#book" class="btn btn-secondary">
+              More Options
+            </a>
+          </div>
+        </div>
+        <div class="hero-gallery">
+          <img src="images/entrance.jpeg" alt="Entrance of Kimaya's Abode">
+          <img src="images/lobby.jpeg" alt="Spacious lobby area">
+          <img src="images/bedroom1.jpeg" alt="Comfortable bedroom">
+          <img src="images/view.jpeg" alt="Natural scenic view from balcony">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Amenities -->
+  <section class="amenities" id="amenities">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Property Highlights</h2>
+        <p class="section-subtitle">Everything you need for a comfortable stay</p>
+      </div>
+      <div class="amenities-grid">
+        <div class="amenity-card">
+          <div class="amenity-icon"><i class="fas fa-home"></i></div>
+          <h3>₹1,500/night</h3>
+          <div class="amenity-price">2BHK Flat</div>
+          <p>Spacious 2 bedroom apartment with balcony and serene natural views</p>
+        </div>
+        <div class="amenity-card">
+          <div class="amenity-icon"><i class="fas fa-bath"></i></div>
+          <h3>Two Bathrooms</h3>
+          <div class="amenity-price">Attached</div>
+          <p>Modern bathrooms with all essential amenities</p>
+        </div>
+        <div class="amenity-card">
+          <div class="amenity-icon"><i class="fas fa-utensils"></i></div>
+          <h3>Fully Equipped Kitchen</h3>
+          <div class="amenity-price">Complete Setup</div>
+          <p>Kitchen with all cooking utensils and appliances</p>
+        </div>
+        <div class="amenity-card">
+          <div class="amenity-icon"><i class="fas fa-couch"></i></div>
+          <h3>Living Room</h3>
+          <div class="amenity-price">Comfortable</div>
+          <p>Cozy living area perfect for relaxation</p>
+        </div>
+        <div class="amenity-card">
+          <div class="amenity-icon"><i class="fas fa-utensils-alt"></i></div>
+          <h3>Dining Space</h3>
+          <div class="amenity-price">Included</div>
+          <p>Dining area for family meals</p>
+        </div>
+        <div class="amenity-card">
+          <div class="amenity-icon"><i class="fas fa-mountain"></i></div>
+          <h3>Natural Views</h3>
+          <div class="amenity-price">Panoramic</div>
+          <p>Beautiful balcony views of greenery</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose -->
+  <section class="why-choose" id="why">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Why Choose Kimaya's Abode?</h2>
+        <p class="section-subtitle">Comfortable stay with natural views and prime location to Chandigarh & New Chandigarh landmarks</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-number">01</div>
+          <h3>Cozy Two Bedroom</h3>
+          <p>Spacious accommodation offering serene natural views with balconies</p>
+        </div>
+        <div class="why-card">
+          <div class="why-number">02</div>
+          <h3>Prime Location</h3>
+          <p>Strategically located near attractions and transport hubs for easy access</p>
+        </div>
+        <div class="why-card">
+          <div class="why-number">03</div>
+          <h3>Guest Focused</h3>
+          <p>Enhanced daily based on guest feedback for better experience</p>
+        </div>
+        <div class="why-card">
+          <div class="why-number">04</div>
+          <h3>Well Equipped</h3>
+          <p>Modern amenities ensuring a home away from home experience</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Photo Gallery -->
+  <section class="gallery" id="gallery">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Photo Gallery</h2>
+        <p class="section-subtitle">Take a tour of our cozy homestay</p>
+      </div>
+      <div class="gallery-grid">
+        <img src="images/entrance.jpeg" alt="Entrance of Kimaya's Abode" loading="lazy">
+        <img src="images/lobby.jpeg" alt="Spacious lobby area" loading="lazy">
+        <img src="images/kitchen.jpeg" alt="Fully equipped kitchen" loading="lazy">
+        <img src="images/bedroom1.jpeg" alt="Bedroom 1 - Main view" loading="lazy">
+        <img src="images/bedroom1_2.jpeg" alt="Bedroom 1 - Another angle" loading="lazy">
+        <img src="images/bedroom1_3.jpeg" alt="Bedroom 1 - Detail view" loading="lazy">
+        <img src="images/bedrrom2.jpeg" alt="Bedroom 2 - Main view" loading="lazy">
+        <img src="images/bedroom2_1.jpeg" alt="Bedroom 2 - Another angle" loading="lazy">
+        <img src="images/view.jpeg" alt="Natural scenic view from balcony" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA/Book -->
+  <section class="cta-section" id="book">
+    <div class="container">
+      <div class="cta-content">
+        <div class="cta-text">
+          <h2>Comfortable Urban Living</h2>
+          <p>Near Chandigarh with natural surroundings, prime location to major landmarks, and designed as true guest home</p>
+          <div class="cta-buttons">
+            <a href="YOUR_AIRBNB_LINK" class="btn btn-primary" target="_blank" style="width: 100%; justify-content: center;">
+              <i class="fab fa-airbnb"></i> Book on Airbnb
+            </a>
+            <a href="YOUR_MAKEMYTIRP_LINK" class="btn btn-primary" target="_blank" style="width: 100%; justify-content: center;">
+              <i class="fas fa-plane"></i> MakeMyTrip
+            </a>
+            <a href="YOUR_BOOKING_LINK" class="btn btn-primary" target="_blank" style="width: 100%; justify-content: center;">
+              <i class="fas fa-calendar-check"></i> Booking.com
+            </a>
+          </div>
+        </div>
+        <div class="contact-card">
+          <h3 style="margin-bottom: 24px; font-size: 1.4rem;">Get in Touch</h3>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-phone"></i></div>
+            <div>+91 98XXXXXXXX | Call / WhatsApp</div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+            <div>contact@kimayasabode.in</div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div>Flat No.10, Tower A, Green Valley Apartments<br>PR-4 Road, Border of Chandigarh & New Chandigarh<br>Mohali, Punjab 160101</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div>
+          <h4>Kimaya's Abode</h4>
+          <p>Cozy homestay offering comfort and convenience near Chandigarh with modern amenities and natural views.</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <p><a href="#hero" style="color: #94a3b8;">Home</a> | <a href="#amenities" style="color: #94a3b8;">Amenities</a> | <a href="#why" style="color: #94a3b8;">Why Us</a> | <a href="#gallery" style="color: #94a3b8;">Gallery</a></p>
+        </div>
+        <div>
+          <h4>Follow Us</h4>
+          <div class="social-links">
+            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+      <div style="text-align: center; padding-top: 40px; border-top: 1px solid #334155; opacity: 0.7;">
+        © 2026 Kimaya's Abode. All rights reserved. | Designed for homestay bookings.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Smooth scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    // Header scroll effect
+    window.addEventListener('scroll', () => {
+      const header = document.querySelector('.header');
+      if (window.scrollY > 100) {
+        header.style.background = 'rgba(10, 15, 30, 0.98)';
+      } else {
+        header.style.background = 'rgba(10, 15, 30, 0.95)';
+      }
+    });
+
+    // Parallax effect for hero images
+    window.addEventListener('scroll', () => {
+      const scrolled = window.pageYOffset;
+      const heroImages = document.querySelectorAll('.hero-gallery img');
+      heroImages.forEach((img, i) => {
+        img.style.transform = `translateY(${scrolled * 0.3 + i * 10}px)`;
+      });
+    });
+  </script>
+</body>
+</html>
