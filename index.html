@@ -245,7 +245,7 @@
     }
     .why-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(4, 1fr);
       gap: 40px;
     }
     .why-card {
@@ -400,6 +400,7 @@
       .cta-content { grid-template-columns: 1fr; gap: 40px; }
       .nav-menu { gap: 20px; }
       .hero-gallery { grid-template-columns: 1fr; }
+      .why-grid { grid-template-columns: 1fr 1fr; }
       .gallery-grid { grid-template-columns: 1fr 1fr; }
     }
   </style>
@@ -460,39 +461,33 @@
       <div class="amenities-grid">
         <div class="amenity-card">
           <div class="amenity-icon"><i class="fas fa-home"></i></div>
-          <h3>₹1,500/night</h3>
-          <div class="amenity-price">2BHK Flat</div>
-          <p>Spacious 2 bedroom apartment with balcony and serene natural views</p>
+          <h3>2BHK Flat</h3>
+          <p>Spacious 2 bedroom apartment with air-conditioned bedrooms, lobby, and serene natural views</p>
         </div>
         <div class="amenity-card">
           <div class="amenity-icon"><i class="fas fa-bath"></i></div>
           <h3>Two Bathrooms</h3>
-          <div class="amenity-price">Attached</div>
-          <p>Modern bathrooms with all essential amenities</p>
+          <p>Modern attached bathrooms with all essential amenities</p>
         </div>
         <div class="amenity-card">
           <div class="amenity-icon"><i class="fas fa-utensils"></i></div>
           <h3>Fully Equipped Kitchen</h3>
-          <div class="amenity-price">Complete Setup</div>
           <p>Kitchen with all cooking utensils and appliances</p>
         </div>
         <div class="amenity-card">
           <div class="amenity-icon"><i class="fas fa-couch"></i></div>
           <h3>Living Room</h3>
-          <div class="amenity-price">Comfortable</div>
-          <p>Cozy living area perfect for relaxation</p>
+          <p>Cozy living area with AC, perfect for relaxation</p>
         </div>
         <div class="amenity-card">
-          <div class="amenity-icon"><i class="fas fa-utensils-alt"></i></div>
+          <div class="amenity-icon"><i class="fas fa-chair"></i></div>
           <h3>Dining Space</h3>
-          <div class="amenity-price">Included</div>
           <p>Dining area for family meals</p>
         </div>
         <div class="amenity-card">
           <div class="amenity-icon"><i class="fas fa-mountain"></i></div>
           <h3>Natural Views</h3>
-          <div class="amenity-price">Panoramic</div>
-          <p>Beautiful balcony views of greenery</p>
+          <p>Beautiful panoramic balcony views of greenery</p>
         </div>
       </div>
     </div>
@@ -559,14 +554,17 @@
           <h2>Comfortable Urban Living</h2>
           <p>Near Chandigarh with natural surroundings, prime location to major landmarks, and designed as true guest home</p>
           <div class="cta-buttons">
-            <a href="https://www.airbnb.co.in/rooms/1585249832439770093?source_impression_id=p3_1773073754_P3YJl1Whak7HHfnG" class="btn btn-primary" target="_blank" style="width: 100%; justify-content: center;">
+            <a href="https://www.airbnb.co.in/rooms/1585249832439770093?source_impression_id=p3_1773073754_P3YJl1Whak7HHfnG" class="btn btn-primary" target="_blank" style="width: 100%; justify-content: center; background: #FF5A5F; box-shadow: 0 10px 30px rgba(255,90,95,0.4);">
               <i class="fab fa-airbnb"></i> Book on Airbnb
             </a>
-            <a href="https://www.makemytrip.com/hotels/kimayas_abode-details-chandigarh.html" class="btn btn-primary" target="_blank" style="width: 100%; justify-content: center;">
+            <a href="https://www.makemytrip.com/hotels/kimayas_abode-details-chandigarh.html" class="btn btn-primary" target="_blank" style="width: 100%; justify-content: center; background: #EE2E24; box-shadow: 0 10px 30px rgba(238,46,36,0.4);">
               <i class="fas fa-plane"></i> MakeMyTrip
             </a>
-            <a href="https://www.booking.com/searchresults.en-gb.html?aid=318615&label=English_India_EN_IN_28546570345-eYW540EsJbOacWZK6kIFyAS634117832355%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atidsa-209717190505%3Alp9198856%3Ali%3Adec%3Adm%3Aag28546570345%3Acmp339861625&gclid=Cj0KCQjw37nNBhDkARIsAEBGI8NLktsmglwTiu6Yq5aN_FVi8bxLY9PkS_a4yiKx4Hf5d-Do6EjMXOQaAijAEALw_wcB&highlighted_hotels=11577536&redirected=1&city=-2092770&hlrd=no_dates&source=hotel&expand_sb=1&keep_landing=1&sid=c7e7d2bb5bb2bf6d56286a5f4e682d4b" class="btn btn-primary" target="_blank" style="width: 100%; justify-content: center;">
+            <a href="https://www.booking.com/searchresults.en-gb.html?aid=318615&label=English_India_EN_IN_28546570345-eYW540EsJbOacWZK6kIFyAS634117832355%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atidsa-209717190505%3Alp9198856%3Ali%3Adec%3Adm%3Aag28546570345%3Acmp339861625&gclid=Cj0KCQjw37nNBhDkARIsAEBGI8NLktsmglwTiu6Yq5aN_FVi8bxLY9PkS_a4yiKx4Hf5d-Do6EjMXOQaAijAEALw_wcB&highlighted_hotels=11577536&redirected=1&city=-2092770&hlrd=no_dates&source=hotel&expand_sb=1&keep_landing=1&sid=c7e7d2bb5bb2bf6d56286a5f4e682d4b" class="btn btn-primary" target="_blank" style="width: 100%; justify-content: center; background: #003580; box-shadow: 0 10px 30px rgba(0,53,128,0.4);">
               <i class="fas fa-calendar-check"></i> Booking.com
+            </a>
+            <a href="https://www.goibibo.com/hotels/kimayas-abode-hotel-in-chandigarh-7623821858949373702/" class="btn btn-primary" target="_blank" style="width: 100%; justify-content: center; background: #EE5535; box-shadow: 0 10px 30px rgba(238,85,53,0.4);">
+              <i class="fas fa-suitcase-rolling"></i> Goibibo
             </a>
           </div>
         </div>
@@ -604,9 +602,10 @@
         <div>
           <h4>Book Us On</h4>
           <div class="social-links">
-            <a href="https://www.airbnb.co.in/rooms/1585249832439770093?source_impression_id=p3_1773073754_P3YJl1Whak7HHfnG" target="_blank" class="social-link" title="Airbnb"><i class="fab fa-airbnb"></i></a>
-            <a href="https://www.makemytrip.com/hotels/kimayas_abode-details-chandigarh.html" target="_blank" class="social-link" title="MakeMyTrip"><i class="fas fa-plane"></i></a>
-            <a href="https://www.booking.com/searchresults.en-gb.html?aid=318615&label=English_India_EN_IN_28546570345-eYW540EsJbOacWZK6kIFyAS634117832355%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atidsa-209717190505%3Alp9198856%3Ali%3Adec%3Adm%3Aag28546570345%3Acmp339861625&gclid=Cj0KCQjw37nNBhDkARIsAEBGI8NLktsmglwTiu6Yq5aN_FVi8bxLY9PkS_a4yiKx4Hf5d-Do6EjMXOQaAijAEALw_wcB&highlighted_hotels=11577536&redirected=1&city=-2092770&hlrd=no_dates&source=hotel&expand_sb=1&keep_landing=1&sid=c7e7d2bb5bb2bf6d56286a5f4e682d4b" target="_blank" class="social-link" title="Booking.com"><i class="fas fa-calendar-check"></i></a>
+            <a href="https://www.airbnb.co.in/rooms/1585249832439770093?source_impression_id=p3_1773073754_P3YJl1Whak7HHfnG" target="_blank" class="social-link" title="Airbnb" style="background: #FF5A5F;"><i class="fab fa-airbnb"></i></a>
+            <a href="https://www.makemytrip.com/hotels/kimayas_abode-details-chandigarh.html" target="_blank" class="social-link" title="MakeMyTrip" style="background: #EE2E24;"><i class="fas fa-plane"></i></a>
+            <a href="https://www.booking.com/searchresults.en-gb.html?aid=318615&label=English_India_EN_IN_28546570345-eYW540EsJbOacWZK6kIFyAS634117832355%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atidsa-209717190505%3Alp9198856%3Ali%3Adec%3Adm%3Aag28546570345%3Acmp339861625&gclid=Cj0KCQjw37nNBhDkARIsAEBGI8NLktsmglwTiu6Yq5aN_FVi8bxLY9PkS_a4yiKx4Hf5d-Do6EjMXOQaAijAEALw_wcB&highlighted_hotels=11577536&redirected=1&city=-2092770&hlrd=no_dates&source=hotel&expand_sb=1&keep_landing=1&sid=c7e7d2bb5bb2bf6d56286a5f4e682d4b" target="_blank" class="social-link" title="Booking.com" style="background: #003580;"><i class="fas fa-calendar-check"></i></a>
+            <a href="https://www.goibibo.com/hotels/kimayas-abode-hotel-in-chandigarh-7623821858949373702/" target="_blank" class="social-link" title="Goibibo" style="background: #EE5535;"><i class="fas fa-suitcase-rolling"></i></a>
           </div>
         </div>
       </div>
